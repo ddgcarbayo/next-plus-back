@@ -1,0 +1,8 @@
+login:
+  name: ${self:custom.funcPrefix}-login
+  handler: src/login/index.login
+  events:
+    - http:
+        path: login
+        method: post
+        cors: true

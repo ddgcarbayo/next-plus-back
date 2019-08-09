@@ -1,0 +1,3 @@
+authorizers-basic:
+  name: ${self:custom.funcPrefix}-authorizers-basic
+  handler: src/functions/authorizers/index.basic

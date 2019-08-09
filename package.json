@@ -1,0 +1,27 @@
+{
+  "name": "next-plus-backend",
+  "version": "1.0.0",
+  "description": "BBVA Next Plus",
+  "private": true,
+  "author": "BBVA Next",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "latest",
+    "axios": "latest",
+    "jsonwebtoken": "latest",
+    "module-alias": "latest",
+    "uuid": "latest"
+  },
+  "scripts": {
+    "start": "serverless offline",
+    "configure": "bash install.sh",
+    "deploy:dev": "serverless deploy",
+    "deploy:production": "serverless deploy --stage production"
+  },
+  "devDependencies": {
+    "serverless-offline": "latest"
+  },
+  "_moduleAliases": {
+    "lib": "lib"
+  }
+}

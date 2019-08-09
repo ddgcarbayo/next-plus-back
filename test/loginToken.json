@@ -1,0 +1,37 @@
+{
+    "body":"{\"token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjVmZTJkNTQxYTQyODJiN2FlMzYyOGZhMDc0ZGQ4YmVhNmRhNWIxOWIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNzUxNjM3Mzg5NTg4LTNkNnZ1cDk1b2VqZm41aWVrY2Z1Y2FmNDR1ZGVxOHNvLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNzUxNjM3Mzg5NTg4LTNkNnZ1cDk1b2VqZm41aWVrY2Z1Y2FmNDR1ZGVxOHNvLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA2MzcwNDY5ODk0OTk0NTAyOTg0IiwiaGQiOiJiYnZhLmNvbSIsImVtYWlsIjoiZGF2aWQuZ2FyY2lhLm5leHRAYmJ2YS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Im1LS0tGc0praGVNMEk5S3VlbUROclEiLCJuYW1lIjoiRElPTklTSU8gREFWSUQgR0FSQ0lBIENBUkJBWU8iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tLy1BbEpqdXQzY0VsSS9BQUFBQUFBQUFBSS9BQUFBQUFBQUFfTS8zeWZBTEs3Z1VNOC9zOTYtYy9waG90by5qcGciLCJnaXZlbl9uYW1lIjoiRElPTklTSU8gREFWSUQiLCJmYW1pbHlfbmFtZSI6IkdBUkNJQSBDQVJCQVlPIiwibG9jYWxlIjoiZXMiLCJpYXQiOjE1NTI2NjMxMTAsImV4cCI6MTU1MjY2NjcxMCwianRpIjoiYmU0NGY3YzkyZTQ5YjlhMzdjYzg0ZmQ3OGNjYzJlMjYxZjNkZWFiYyJ9.rG-YJ3dXO3tGgGLrBS8PVjz_L7eNj72q5Pn78NXqWbpSrwKHuzxd-QUp4uya1EoiuvcFASGISTHiGds3cgZHha5oxUVLhO5ovO8BHeXlKmHQVvJ4Zhpj483os43Ox39V96VVI3XgCq19mp6WOM1nuRt1v7qjKaPWhD5UnMpGeCOIYQGr-JiS3TdBYaROxLpzJwMDFRMoDeyw2TdkJ-n-hc_ypd1uAIZ1n6IglWPBPQaand_XFSR_eZjerqueqJcx3t_27kgAhNzbjApH6s7Jr6Rju3mZoftYJsObiVy_DOcRUNOZ82VUGTvqweg6TVNG4Ziib1wEsWEXUm7zho49Qg\"}",
+      "resource": "/{proxy+}",
+      "path": "/candidate/1",
+      "httpMethod": "GET",
+      "isBase64Encoded": true,
+      "queryStringParameters": {
+        "isFree": "1"
+      },
+      "pathParameters": {
+        "id": "1"
+      },
+      "stageVariables": {
+        "baz": "qux"
+      },
+      "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Encoding": "gzip, deflate, sdch",
+        "Accept-Language": "en-US,en;q=0.8",
+        "Cache-Control": "max-age=0",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "true",
+        "CloudFront-Is-Mobile-Viewer": "false",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-Country": "US",
+        "Host": "1234567890.execute-api.us-east-1.amazonaws.com",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Custom User Agent String",
+        "Via": "1.1 08f323deadbeefa7af34d5feb414ce27.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "cDehVQoZnx43VYQb9j2-nvCh-9z396Uhbp027Y2JvkCPNLmGJHqlaA==",
+        "X-Forwarded-For": "127.0.0.1, 127.0.0.2",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https",
+        "Authorization": "a13a45fde34472f23055fe87816a1c72"
+      }
+    }

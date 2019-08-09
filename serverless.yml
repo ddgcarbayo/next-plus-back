@@ -1,0 +1,48 @@
+service: ${file(./package.json):name}
+frameworkVersion: ">=1.34.0 <2.0.0"
+package:
+  individually: false
+custom:
+  funcPrefix: ${self:service}-${self:provider.stage}
+  secrets: ${file(config/${self:provider.stage}.yaml)}
+  AUTH_GOOGLE_LOGIN_CLIENT: ${self:custom.secrets.AUTH_GOOGLE_LOGIN_CLIENT}
+  AUTH_SECRET: ${self:custom.secrets.AUTH_SECRET}
+  authorizer:
+    basic:
+      name: authorizers-basic
+      type: token
+      identitySource: method.request.header.Authorization
+      identityValidationExpression: Bearer (.*)
+      resultTtlInSeconds: 0
+    admin:
+      name: authorizers-basic
+      type: token
+      identitySource: method.request.header.Authorization
+      identityValidationExpression: Bearer (.*)
+      resultTtlInSeconds: 0
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'}
+  environment:
+    STAGE: ${self:provider.stage}
+    REGION: us-east-1
+    AUTH_GOOGLE_LOGIN_CLIENT: ${self:custom.AUTH_GOOGLE_LOGIN_CLIENT}
+    AUTH_SECRET: ${self:custom.AUTH_SECRET}
+functions:
+  - ${file(./src/api/chat/serverless.yml)}
+  - ${file(./src/api/login/serverless.yml)}
+  - ${file(./src/functions/authorizers/functions.yaml)}
+plugins:
+  - serverless-offline
+resources:
+  Resources:
+    GatewayResponseDefault4XX:
+      Type: 'AWS::ApiGateway::GatewayResponse'
+      Properties:
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+        ResponseType: DEFAULT_4XX
+        RestApiId:
+          Ref: 'ApiGatewayRestApi'

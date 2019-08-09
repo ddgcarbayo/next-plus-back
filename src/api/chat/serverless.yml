@@ -1,0 +1,11 @@
+example:
+  name: ${self:custom.funcPrefix}-example
+  handler: src/api/login/index.example
+  environment: # que roles pueden ejecutarlo (si no se pone nada, puede hacerlo todo el mundo)
+    AUTH_ROLES: admin,user
+  events:
+  - http:
+      path: chat/example
+      method: get
+      cors: true
+      authorizer: ${self:custom.authorizer.basic} # solo si queremos que sea una funcion con autenticacion
